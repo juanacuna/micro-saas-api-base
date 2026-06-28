@@ -1,0 +1,13 @@
+com\tuservicio\infrastructure\adapter\RestControllerAdapter.class
+com\tuservicio\core\domain\Transaction.class
+com\tuservicio\infrastructure\repository\JpaTransactionRepository.class
+com\tuservicio\core\port\ConciliationUseCase.class
+com\tuservicio\core\port\TransactionRepositoryPort.class
+com\tuservicio\core\service\ConciliationService.class
+com\tuservicio\application\config\SecurityConfig.class
+com\tuservicio\infrastructure\adapter\OracleDatabaseAdapter.class
+com\tuservicio\infrastructure\adapter\S3StorageAdapter.class
+com\tuservicio\core\domain\Conciliation.class
+com\tuservicio\infrastructure\entity\TransactionEntity.class
+com\tuservicio\application\config\AppConfig.class
+com\tuservicio\application\MainApplication.class

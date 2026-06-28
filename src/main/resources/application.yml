@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: micro-saas-conciliation-backend
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:FREE
+    username: saas_user
+    password: saaspass123
+    driver-class-name: oracle.jdbc.OracleDriver
+  jpa:
+    database-platform: org.hibernate.dialect.OracleDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+aws:
+  s3:
+    endpoint: http://localhost:4566
+    bucket-name: conciliation-files
+    region: us-east-1
+    access-key: test
+    secret-key: test

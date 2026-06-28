@@ -1,0 +1,13 @@
+C:\tools\github\micro-saas-conciliation\backend\src\main\java\com\tuservicio\application\config\AppConfig.java
+C:\tools\github\micro-saas-conciliation\backend\src\main\java\com\tuservicio\application\config\SecurityConfig.java
+C:\tools\github\micro-saas-conciliation\backend\src\main\java\com\tuservicio\application\MainApplication.java
+C:\tools\github\micro-saas-conciliation\backend\src\main\java\com\tuservicio\core\domain\Conciliation.java
+C:\tools\github\micro-saas-conciliation\backend\src\main\java\com\tuservicio\core\domain\Transaction.java
+C:\tools\github\micro-saas-conciliation\backend\src\main\java\com\tuservicio\core\port\ConciliationUseCase.java
+C:\tools\github\micro-saas-conciliation\backend\src\main\java\com\tuservicio\core\port\TransactionRepositoryPort.java
+C:\tools\github\micro-saas-conciliation\backend\src\main\java\com\tuservicio\core\service\ConciliationService.java
+C:\tools\github\micro-saas-conciliation\backend\src\main\java\com\tuservicio\infrastructure\adapter\OracleDatabaseAdapter.java
+C:\tools\github\micro-saas-conciliation\backend\src\main\java\com\tuservicio\infrastructure\adapter\RestControllerAdapter.java
+C:\tools\github\micro-saas-conciliation\backend\src\main\java\com\tuservicio\infrastructure\adapter\S3StorageAdapter.java
+C:\tools\github\micro-saas-conciliation\backend\src\main\java\com\tuservicio\infrastructure\entity\TransactionEntity.java
+C:\tools\github\micro-saas-conciliation\backend\src\main\java\com\tuservicio\infrastructure\repository\JpaTransactionRepository.java
