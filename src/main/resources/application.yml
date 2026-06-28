@@ -2,14 +2,29 @@ spring:
   application:
     name: micro-saas-conciliation-backend
   datasource:
-    url: jdbc:oracle:thin:@localhost:1521:FREE
-    username: saas_user
-    password: saaspass123
-    driver-class-name: oracle.jdbc.OracleDriver
+    # 1. Le indicamos a Spring que fuerce el uso del Pool UCP de Oracle en lugar del HikariCP (por defecto)
+    type: oracle.ucp.jdbc.PoolDataSource
+
+    # 2. Tu cadena de conexión en la nube usando TCPS (Autonomus Database)
+    url: jdbc:oracle:thin:@(description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.sa-santiago-1.oraclecloud.com))(connect_data=(service_name=g8749d9fda57750_i0mzku8ucg3w4snl_high.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+    username: ${ORACLE_DB_USER:ADMIN} # ¡No quemes credenciales! Usa variables de entorno.
+    password: ${ORACLE_DB_PASSWORD:Principal123456}
+
+    # 3. Configuración del Pool y Resiliencia
+    oracleucp:
+      connection-pool-name: ConciliationUCPPool
+      connection-factory-class-name: oracle.jdbc.replay.OracleConnectionPoolDataSourceImpl
+      initial-pool-size: 5
+      min-pool-size: 5
+      max-pool-size: 20
+      # Tiempo máximo de espera para obtener una conexión (evita bloqueos infinitos)
+      connection-wait-timeout: 10
+      # Valida que la conexión esté viva antes de entregarla a la aplicación
+      validate-connection-on-borrow: true
   jpa:
     database-platform: org.hibernate.dialect.OracleDialect
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
     show-sql: true
 
 aws:
