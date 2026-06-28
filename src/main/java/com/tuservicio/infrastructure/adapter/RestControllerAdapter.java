@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/conciliation")
-public class RestControllerAdapter {
+public class
+RestControllerAdapter {
 
     private final ConciliationUseCase conciliationUseCase;
 
